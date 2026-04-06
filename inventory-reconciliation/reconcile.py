@@ -86,7 +86,7 @@ def main() -> None:
     logger.info("Reconciling snapshots")
     result = reconcile(before_snapshot, after_snapshot)
 
-    report = build_report(result, str(args.before), str(args.after))
+    report = build_report(result, args.before.name, args.after.name)
 
     report_path = write_report(report, args.output_dir)
 

@@ -1,0 +1,583 @@
+{
+  "summary": {
+    "snapshot_before": "snapshot_1.csv",
+    "snapshot_after": "snapshot_2.csv",
+    "total_before": 75,
+    "total_after": 78,
+    "changed": 71,
+    "unchanged": 2,
+    "removed": 2,
+    "added": 5,
+    "quality_issues": 13
+  },
+  "changed": [
+    {
+      "sku": "SKU-001",
+      "quantity_before": 150,
+      "quantity_after": 145,
+      "quantity_delta": -5
+    },
+    {
+      "sku": "SKU-002",
+      "quantity_before": 75,
+      "quantity_after": 70,
+      "quantity_delta": -5
+    },
+    {
+      "sku": "SKU-003",
+      "quantity_before": 200,
+      "quantity_after": 185,
+      "quantity_delta": -15
+    },
+    {
+      "sku": "SKU-004",
+      "quantity_before": 50,
+      "quantity_after": 48,
+      "quantity_delta": -2
+    },
+    {
+      "sku": "SKU-005",
+      "quantity_before": 500,
+      "quantity_after": 480,
+      "quantity_delta": -20
+    },
+    {
+      "sku": "SKU-008",
+      "quantity_before": 45,
+      "quantity_after": 42,
+      "quantity_delta": -3
+    },
+    {
+      "sku": "SKU-009",
+      "quantity_before": 1000,
+      "quantity_after": 975,
+      "quantity_delta": -25
+    },
+    {
+      "sku": "SKU-010",
+      "quantity_before": 750,
+      "quantity_after": 720,
+      "quantity_delta": -30
+    },
+    {
+      "sku": "SKU-011",
+      "quantity_before": 120,
+      "quantity_after": 115,
+      "quantity_delta": -5
+    },
+    {
+      "sku": "SKU-012",
+      "quantity_before": 90,
+      "quantity_after": 85,
+      "quantity_delta": -5
+    },
+    {
+      "sku": "SKU-013",
+      "quantity_before": 2000,
+      "quantity_after": 1850,
+      "quantity_delta": -150
+    },
+    {
+      "sku": "SKU-014",
+      "quantity_before": 300,
+      "quantity_after": 290,
+      "quantity_delta": -10
+    },
+    {
+      "sku": "SKU-015",
+      "quantity_before": 250,
+      "quantity_after": 245,
+      "quantity_delta": -5
+    },
+    {
+      "sku": "SKU-016",
+      "quantity_before": 180,
+      "quantity_after": 165,
+      "quantity_delta": -15
+    },
+    {
+      "sku": "SKU-017",
+      "quantity_before": 95,
+      "quantity_after": 88,
+      "quantity_delta": -7
+    },
+    {
+      "sku": "SKU-018",
+      "quantity_before": 800,
+      "quantity_after": 750,
+      "quantity_delta": -50
+    },
+    {
+      "sku": "SKU-019",
+      "quantity_before": 600,
+      "quantity_after": 580,
+      "quantity_delta": -20
+    },
+    {
+      "sku": "SKU-020",
+      "quantity_before": 400,
+      "quantity_after": 390,
+      "quantity_delta": -10
+    },
+    {
+      "sku": "SKU-021",
+      "quantity_before": 450,
+      "quantity_after": 425,
+      "quantity_delta": -25
+    },
+    {
+      "sku": "SKU-022",
+      "quantity_before": 380,
+      "quantity_after": 365,
+      "quantity_delta": -15
+    },
+    {
+      "sku": "SKU-023",
+      "quantity_before": 220,
+      "quantity_after": 210,
+      "quantity_delta": -10
+    },
+    {
+      "sku": "SKU-024",
+      "quantity_before": 175,
+      "quantity_after": 170,
+      "quantity_delta": -5
+    },
+    {
+      "sku": "SKU-027",
+      "quantity_before": 600,
+      "quantity_after": 575,
+      "quantity_delta": -25
+    },
+    {
+      "sku": "SKU-028",
+      "quantity_before": 400,
+      "quantity_after": 385,
+      "quantity_delta": -15
+    },
+    {
+      "sku": "SKU-029",
+      "quantity_before": 150,
+      "quantity_after": 145,
+      "quantity_delta": -5
+    },
+    {
+      "sku": "SKU-030",
+      "quantity_before": 200,
+      "quantity_after": 188,
+      "quantity_delta": -12
+    },
+    {
+      "sku": "SKU-031",
+      "quantity_before": 120,
+      "quantity_after": 112,
+      "quantity_delta": -8
+    },
+    {
+      "sku": "SKU-032",
+      "quantity_before": 300,
+      "quantity_after": 285,
+      "quantity_delta": -15
+    },
+    {
+      "sku": "SKU-033",
+      "quantity_before": 180,
+      "quantity_after": 172,
+      "quantity_delta": -8
+    },
+    {
+      "sku": "SKU-034",
+      "quantity_before": 250,
+      "quantity_after": 240,
+      "quantity_delta": -10
+    },
+    {
+      "sku": "SKU-035",
+      "quantity_before": 1500,
+      "quantity_after": 1420,
+      "quantity_delta": -80
+    },
+    {
+      "sku": "SKU-036",
+      "quantity_before": 400,
+      "quantity_after": 385,
+      "quantity_delta": -15
+    },
+    {
+      "sku": "SKU-037",
+      "quantity_before": 800,
+      "quantity_after": 765,
+      "quantity_delta": -35
+    },
+    {
+      "sku": "SKU-038",
+      "quantity_before": 25,
+      "quantity_after": 22,
+      "quantity_delta": -3
+    },
+    {
+      "sku": "SKU-039",
+      "quantity_before": 200,
+      "quantity_after": 185,
+      "quantity_delta": -15
+    },
+    {
+      "sku": "SKU-040",
+      "quantity_before": 150,
+      "quantity_after": 142,
+      "quantity_delta": -8
+    },
+    {
+      "sku": "SKU-041",
+      "quantity_before": 100,
+      "quantity_after": 95,
+      "quantity_delta": -5
+    },
+    {
+      "sku": "SKU-042",
+      "quantity_before": 75,
+      "quantity_after": 70,
+      "quantity_delta": -5
+    },
+    {
+      "sku": "SKU-043",
+      "quantity_before": 60,
+      "quantity_after": 58,
+      "quantity_delta": -2
+    },
+    {
+      "sku": "SKU-044",
+      "quantity_before": 40,
+      "quantity_after": 35,
+      "quantity_delta": -5
+    },
+    {
+      "sku": "SKU-045",
+      "quantity_before": 25,
+      "quantity_after": 23,
+      "quantity_delta": -2,
+      "name_before": "Multimeter Pro",
+      "name_after": "Multimeter Professional"
+    },
+    {
+      "sku": "SKU-046",
+      "quantity_before": 35,
+      "quantity_after": 32,
+      "quantity_delta": -3
+    },
+    {
+      "sku": "SKU-047",
+      "quantity_before": 300,
+      "quantity_after": 280,
+      "quantity_delta": -20
+    },
+    {
+      "sku": "SKU-048",
+      "quantity_before": 500,
+      "quantity_after": 475,
+      "quantity_delta": -25
+    },
+    {
+      "sku": "SKU-049",
+      "quantity_before": 800,
+      "quantity_after": 760,
+      "quantity_delta": -40
+    },
+    {
+      "sku": "SKU-050",
+      "quantity_before": 200,
+      "quantity_after": 190,
+      "quantity_delta": -10
+    },
+    {
+      "sku": "SKU-051",
+      "quantity_before": 50,
+      "quantity_after": 48,
+      "quantity_delta": -2
+    },
+    {
+      "sku": "SKU-052",
+      "quantity_before": 400,
+      "quantity_after": 375,
+      "quantity_delta": -25
+    },
+    {
+      "sku": "SKU-053",
+      "quantity_before": 150,
+      "quantity_after": 140,
+      "quantity_delta": -10
+    },
+    {
+      "sku": "SKU-054",
+      "quantity_before": 300,
+      "quantity_after": 285,
+      "quantity_delta": -15
+    },
+    {
+      "sku": "SKU-055",
+      "quantity_before": 250,
+      "quantity_after": 235,
+      "quantity_delta": -15
+    },
+    {
+      "sku": "SKU-056",
+      "quantity_before": 180,
+      "quantity_after": 168,
+      "quantity_delta": -12
+    },
+    {
+      "sku": "SKU-057",
+      "quantity_before": 45,
+      "quantity_after": 42,
+      "quantity_delta": -3
+    },
+    {
+      "sku": "SKU-058",
+      "quantity_before": 60,
+      "quantity_after": 58,
+      "quantity_delta": -2
+    },
+    {
+      "sku": "SKU-059",
+      "quantity_before": 80,
+      "quantity_after": 75,
+      "quantity_delta": -5
+    },
+    {
+      "sku": "SKU-060",
+      "quantity_before": 120,
+      "quantity_after": 115,
+      "quantity_delta": -5
+    },
+    {
+      "sku": "SKU-061",
+      "quantity_before": 90,
+      "quantity_after": 85,
+      "quantity_delta": -5
+    },
+    {
+      "sku": "SKU-062",
+      "quantity_before": 110,
+      "quantity_after": 105,
+      "quantity_delta": -5
+    },
+    {
+      "sku": "SKU-063",
+      "quantity_before": 200,
+      "quantity_after": 192,
+      "quantity_delta": -8
+    },
+    {
+      "sku": "SKU-064",
+      "quantity_before": 75,
+      "quantity_after": 72,
+      "quantity_delta": -3
+    },
+    {
+      "sku": "SKU-065",
+      "quantity_before": 40,
+      "quantity_after": 38,
+      "quantity_delta": -2
+    },
+    {
+      "sku": "SKU-066",
+      "quantity_before": 25,
+      "quantity_after": 22,
+      "quantity_delta": -3
+    },
+    {
+      "sku": "SKU-067",
+      "quantity_before": 55,
+      "quantity_after": 52,
+      "quantity_delta": -3
+    },
+    {
+      "sku": "SKU-068",
+      "quantity_before": 35,
+      "quantity_after": 33,
+      "quantity_delta": -2
+    },
+    {
+      "sku": "SKU-069",
+      "quantity_before": 20,
+      "quantity_after": 18,
+      "quantity_delta": -2
+    },
+    {
+      "sku": "SKU-070",
+      "quantity_before": 15,
+      "quantity_after": 12,
+      "quantity_delta": -3
+    },
+    {
+      "sku": "SKU-071",
+      "quantity_before": 30,
+      "quantity_after": 28,
+      "quantity_delta": -2
+    },
+    {
+      "sku": "SKU-072",
+      "quantity_before": 20,
+      "quantity_after": 18,
+      "quantity_delta": -2
+    },
+    {
+      "sku": "SKU-073",
+      "quantity_before": 100,
+      "quantity_after": 95,
+      "quantity_delta": -5
+    },
+    {
+      "sku": "SKU-074",
+      "quantity_before": 45,
+      "quantity_after": 42,
+      "quantity_delta": -3
+    },
+    {
+      "sku": "SKU-075",
+      "quantity_before": 40,
+      "quantity_after": 38,
+      "quantity_delta": -2
+    }
+  ],
+  "unchanged": [
+    {
+      "sku": "SKU-006",
+      "name": "Connector Cable 10ft",
+      "quantity": 350,
+      "location": "Warehouse C"
+    },
+    {
+      "sku": "SKU-007",
+      "name": "Power Supply Unit",
+      "quantity": 80,
+      "location": "Warehouse A"
+    }
+  ],
+  "removed": [
+    {
+      "sku": "SKU-025",
+      "name": "VGA Cable",
+      "quantity": 50,
+      "location": "Warehouse B"
+    },
+    {
+      "sku": "SKU-026",
+      "name": "DVI Cable",
+      "quantity": 35,
+      "location": "Warehouse B"
+    }
+  ],
+  "added": [
+    {
+      "sku": "SKU-076",
+      "name": "Stream Deck Mini",
+      "quantity": 15,
+      "location": "Warehouse A"
+    },
+    {
+      "sku": "SKU-077",
+      "name": "Stream Deck XL",
+      "quantity": 8,
+      "location": "Warehouse A"
+    },
+    {
+      "sku": "SKU-078",
+      "name": "Capture Card",
+      "quantity": 12,
+      "location": "Warehouse A"
+    },
+    {
+      "sku": "SKU-079",
+      "name": "USB-C Hub",
+      "quantity": 45,
+      "location": "Warehouse A"
+    },
+    {
+      "sku": "SKU-080",
+      "name": "Thunderbolt Cable",
+      "quantity": 30,
+      "location": "Warehouse A"
+    }
+  ],
+  "quality_issues": [
+    {
+      "sku": "SKU-035",
+      "field": "name",
+      "raw_value": "'Cable Ties 100pk '",
+      "description": "Leading/trailing whitespace"
+    },
+    {
+      "sku": "SKU-052",
+      "field": "name",
+      "raw_value": "' Compressed Air Can'",
+      "description": "Leading/trailing whitespace"
+    },
+    {
+      "sku": "SKU-002",
+      "field": "name",
+      "raw_value": "' Widget B'",
+      "description": "Leading/trailing whitespace"
+    },
+    {
+      "sku": "SKU-002",
+      "field": "quantity",
+      "raw_value": "70.0",
+      "description": "Non-integer quantity representation"
+    },
+    {
+      "sku": "SKU-005",
+      "field": "sku",
+      "raw_value": "SKU005",
+      "description": "Non-standard SKU format"
+    },
+    {
+      "sku": "SKU-007",
+      "field": "quantity",
+      "raw_value": "80.00",
+      "description": "Non-integer quantity representation"
+    },
+    {
+      "sku": "SKU-008",
+      "field": "sku",
+      "raw_value": "sku-008",
+      "description": "Non-standard SKU format"
+    },
+    {
+      "sku": "SKU-010",
+      "field": "name",
+      "raw_value": "'Mounting Bracket Large '",
+      "description": "Leading/trailing whitespace"
+    },
+    {
+      "sku": "SKU-018",
+      "field": "sku",
+      "raw_value": "SKU018",
+      "description": "Non-standard SKU format"
+    },
+    {
+      "sku": "SKU-021",
+      "field": "name",
+      "raw_value": "' HDMI Cable 3ft '",
+      "description": "Leading/trailing whitespace"
+    },
+    {
+      "sku": "SKU-035",
+      "field": "counted_at",
+      "raw_value": "01/15/2024",
+      "description": "Non-ISO date format (MM/DD/YYYY)"
+    },
+    {
+      "sku": "SKU-045",
+      "field": "quantity",
+      "raw_value": "-5",
+      "description": "Negative quantity"
+    },
+    {
+      "sku": "SKU-045",
+      "field": "sku",
+      "raw_value": "line 54",
+      "description": "Duplicate SKU (keeping first occurrence, discarding: Multimeter Pro, qty=-5)"
+    }
+  ]
+}
