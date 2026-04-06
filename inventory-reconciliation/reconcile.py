@@ -7,6 +7,10 @@ import logging
 import sys
 from pathlib import Path
 
+from engine import reconcile
+from parsing import SNAPSHOT_1_COLUMNS, SNAPSHOT_2_COLUMNS, parse_snapshot
+from reporting import build_report, write_report
+
 DEFAULT_SNAPSHOT_DIR = Path(__file__).parent / "data"
 DEFAULT_OUTPUT_DIR = Path(__file__).parent / "output"
 
@@ -14,6 +18,8 @@ SNAPSHOT_BEFORE = DEFAULT_SNAPSHOT_DIR / "snapshot_1.csv"
 SNAPSHOT_AFTER = DEFAULT_SNAPSHOT_DIR / "snapshot_2.csv"
 
 LOG_FORMAT = "%(levelname)s: %(message)s"
+
+logger = logging.getLogger(__name__)
 
 
 def configure_logging(verbose: bool) -> None:
@@ -55,10 +61,44 @@ def build_argument_parser() -> argparse.ArgumentParser:
     return parser
 
 
+def detect_column_mapping(csv_path: Path) -> dict[str, str]:
+    with open(csv_path, encoding="utf-8") as fh:
+        header = fh.readline().strip()
+
+    if "product_name" in header or "qty" in header:
+        return SNAPSHOT_2_COLUMNS
+    return SNAPSHOT_1_COLUMNS
+
+
 def main() -> None:
     args = build_argument_parser().parse_args()
     configure_logging(args.verbose)
-    logging.info("Reconciliation not yet implemented")
+
+    before_mapping = detect_column_mapping(args.before)
+    after_mapping = detect_column_mapping(args.after)
+
+    logger.info("Parsing %s", args.before.name)
+    before_snapshot = parse_snapshot(args.before, before_mapping)
+
+    logger.info("Parsing %s", args.after.name)
+    after_snapshot = parse_snapshot(args.after, after_mapping)
+
+    logger.info("Reconciling snapshots")
+    result = reconcile(before_snapshot, after_snapshot)
+
+    report = build_report(result, str(args.before), str(args.after))
+
+    report_path = write_report(report, args.output_dir)
+
+    summary = report["summary"]
+    logger.info(
+        "Done -- %d changed, %d unchanged, %d removed, %d added, %d quality issues",
+        summary["changed"],
+        summary["unchanged"],
+        summary["removed"],
+        summary["added"],
+        summary["quality_issues"],
+    )
 
 
 if __name__ == "__main__":
