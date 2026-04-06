@@ -2,23 +2,26 @@
 
 ## Approach
 
-The solution is a three-stage pipeline: **parse → reconcile → report**.
+The solution is a three-stage pipeline: **parse → reconcile → report**, each in its own module. Quality issues discovered during parsing are accumulated as structured data and carried through to the final report, so the consumer gets reconciliation results and data quality findings in one place.
 
-Each stage is a separate module with pure functions and no shared mutable state. Data flows forward through NamedTuples. Quality issues are accumulated as structured data alongside parsed items rather than logged and forgotten, so the final report gives consumers the full picture without requiring them to read logs.
+All dependencies are stdlib. The only external dependency is `pytest` for testing.
 
-All dependencies are stdlib (`csv`, `json`, `re`, `pathlib`, `argparse`, `logging`). The only external dependency is `pytest` for testing.
+## Assumptions
+
+- **SKU is the primary key.** Items are matched across snapshots by normalized SKU, not by name or location.
+- **First occurrence wins.** When a SKU appears more than once in a file, I keep the first row and flag the duplicate. The second `SKU-045` entry (qty=-5) looks like a data error, not a correction.
+- **Quantity is always integral.** Values like `70.0` and `80.00` are coerced to `int`. If fractional quantities were meaningful, this assumption would need revisiting.
+- **Whitespace is never intentional.** Leading/trailing whitespace in names and SKUs is stripped and flagged, not preserved.
 
 ## Key Decisions
 
-**SKU normalization.** The two snapshots have inconsistent SKU formatting: `SKU005` (missing hyphen), `sku-008` (lowercase), `SKU018` (missing hyphen). I normalize all SKUs to the canonical `SKU-NNN` pattern using a regex, and flag the original value as a quality issue.
+**SKU normalization.** The snapshots have inconsistent SKU formatting: `SKU005` (missing hyphen), `sku-008` (lowercase), `SKU018` (missing hyphen). I normalize all to the canonical `SKU-NNN` pattern and flag the originals as quality issues.
 
-**Column mapping.** The snapshots use different schemas (`name` vs `product_name`, `quantity` vs `qty`, etc.). Rather than hardcoding column indices, each snapshot gets a column mapping dict that translates file-specific headers to canonical names. The CLI auto-detects which mapping to use based on the CSV header.
+**Column mapping.** The two files use different schemas (`name` vs `product_name`, `quantity` vs `qty`, etc.). Each file gets a mapping dict that translates its headers to canonical names. The CLI auto-detects which mapping to use from the CSV header.
 
-**Duplicate handling.** `SKU-045` appears twice in snapshot 2 — once with valid data (qty=23) and once with a negative quantity (qty=-5). I keep the first occurrence and discard the duplicate, flagging it as a quality issue with full context.
+**JSON output.** The README permits CSV or JSON. JSON maps naturally to the hierarchical report structure (summary, categorized items, quality issues). A flat CSV would lose structure or require multiple files.
 
-**JSON output.** The README permits CSV or JSON. I chose JSON because the report has a naturally hierarchical structure: summary counts, categorized item lists, and quality issues. A flat CSV would either lose structure or require multiple files.
-
-**Negative quantities.** Flagged as a quality issue but still included in reconciliation. The downstream consumer is better positioned to decide whether a negative quantity is a data error or a legitimate adjustment (e.g., a return). The tool reports; it does not censor.
+**Negative quantities.** Flagged as a quality issue but still included in reconciliation. The downstream consumer is better positioned to decide whether `-5` is a data error or a legitimate adjustment. The tool reports; it does not censor.
 
 ## Data Quality Issues Found
 
